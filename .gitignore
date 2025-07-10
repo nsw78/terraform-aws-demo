@@ -45,8 +45,10 @@ terraform.tfstate.backup
 *.zip
 .aws/
 
+# Others
 *.pem
 *.zip
 .aws/
 *.tfstate
 *.tfvars
+*.jar
