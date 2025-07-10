@@ -42,5 +42,11 @@ terraform.tfstate.backup
 
 # Key AWS
 *.pem
+*.zip
+.aws/
 
-
+*.pem
+*.zip
+.aws/
+*.tfstate
+*.tfvars
