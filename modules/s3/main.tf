@@ -1,11 +1,18 @@
 resource "aws_s3_bucket" "this" {
   bucket = var.bucket_name
+  force_destroy = true
+  tags = var.tags
+}
 
-  versioning {
-    enabled = true
+resource "aws_s3_bucket_versioning" "this" {
+  bucket = aws_s3_bucket.this.id
+  versioning_configuration {
+    status = "Enabled"
   }
+}
 
-  tags = {
-    Name = var.bucket_name
-  }
+variable "tags" {
+  description = "Tags to apply to all resources"
+  type        = map(string)
+  default     = {}
 }

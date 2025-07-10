@@ -1,9 +1,14 @@
 {
-  "name": "Terraform AWS Codespaces",
-  "image": "hashicorp/terraform:light",
+  "name": "Terraform AWS Dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "aws-cli": {}
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest"
+    }
   },
-  "postCreateCommand": "terraform --version && aws --version",
-  "remoteUser": "terraform"
+  "postCreateCommand": "aws --version && terraform --version",
+  "remoteEnv": {
+    "AWS_DEFAULT_REGION": "us-east-1"
+  }
 }

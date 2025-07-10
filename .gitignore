@@ -39,3 +39,8 @@ terraform.rc
 terraform.tfstate
 terraform.tfstate.backup
 *.tfplan
+
+# Key AWS
+*.pem
+
+
