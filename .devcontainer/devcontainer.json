@@ -1,0 +1,9 @@
+{
+  "name": "Terraform AWS Codespaces",
+  "image": "hashicorp/terraform:light",
+  "features": {
+    "aws-cli": {}
+  },
+  "postCreateCommand": "terraform --version && aws --version",
+  "remoteUser": "terraform"
+}
