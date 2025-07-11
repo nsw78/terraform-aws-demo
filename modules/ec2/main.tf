@@ -1,6 +1,3 @@
-# - terraform destroy -auto-approve
-# - terraform apply
-
 
 resource "aws_security_group" "ssh" {
   name        = "${var.name_prefix}-sg"
